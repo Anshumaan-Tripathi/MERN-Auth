@@ -21,7 +21,7 @@ const Signup = () => {
       return;
     }
 
-    fetch("http://localhost:5000/api/auth/signup", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {

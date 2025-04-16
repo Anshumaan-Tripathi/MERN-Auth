@@ -28,7 +28,7 @@ const ResetPassword = () => {
   }, [])
 
   const handelPasswordReset = () => {
-    fetch("http://localhost:5000/api/auth/reset-password", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/reset-password`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -4,7 +4,7 @@ const Logout = () => {
   const navigate = useNavigate()
 
   function handleLogout() {
-    fetch("http://localhost:5000/api/auth/logout", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/logout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

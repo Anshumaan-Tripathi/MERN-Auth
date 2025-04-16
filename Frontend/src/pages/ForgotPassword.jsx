@@ -10,7 +10,7 @@ const ForgotPassword = () => {
       return alert("Please enter your email.")
     }
 
-    fetch("http://localhost:5000/api/auth/forgot-password", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/forgot-password`, {
       method: "POST",
       body: JSON.stringify({ email: resetEmail }),
       headers: {

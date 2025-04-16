@@ -24,7 +24,7 @@ const EmailVerify = () => {
 
   const handleSubmit = () => {
     setLoading(true);
-    fetch("http://localhost:5000/api/auth/verify-email", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/verify-email`, {
       method: "POST",
       body: JSON.stringify(verificationDetails),
       headers: {

@@ -8,7 +8,7 @@ const Dashboard = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/check-auth", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/check-auth`, {
       credentials: "include"
     })
       .then((res) => res.json())
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
       <button
         onClick={() => {
-          fetch("http://localhost:5000/api/auth/logout", {
+          fetch("${import.meta.env.VITE_BACKEND_URL}/api/auth/logout", {
             method: "POST",
             credentials: "include"
           }).then(() => {
