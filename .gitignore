@@ -1,0 +1,14 @@
+# Node.js backend
+/backend/node_modules/
+backend/.env
+
+# React frontend
+frontend/node_modules/
+frontend/.env
+frontend/dist/
+frontend/.vite/
+
+# General
+.env
+.DS_Store
+*.log
